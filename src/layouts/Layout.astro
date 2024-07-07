@@ -9,62 +9,10 @@ const { title, description } = Astro.props;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content={description} />
   <title>{title}</title>
-  <style>
-    body {
-      background: #ded7d7;
-      color: #ddd;
-      margin: 0;
-      padding: 0;
-    }
-    
-    header {
-      background: #f4ebeb;
-      padding: 1rem;
-      color: #060606;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    header nav a {
-      display: inline-block;
-      color: #070606;
-      text-decoration: none;
-      margin: 0 0.5rem;
-      background: linear-gradient(to right, rgb(228 189 160), rgb(233 241 239));
-      border-radius: 8px;  /* Abgerundete Ecken */
-      box-shadow: 0 2px 4px rgb(0 0 0 / 10%);  /* Leichter Schatten */
-      transition: background 0.3s ease, transform 0.3s ease;  /* Übergangseffekte */
-    }
-
-    header nav a:hover {
-      background: linear-gradient(to right, rgb(190 130 140), rgb(200 208 205));  /* Dunklerer Hintergrund beim Hover */
-      text-decoration: none;  /* Keine Unterstreichung beim Hover */
-      transform: translateY(-2px);
-    }
-
-    footer {
-      background: #cdc5c5;
-      color: #fff;
-      padding: 0.1rem;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-    
-    main {
-      padding: 2rem;
-      max-width: 2000px;
-      background: #f7f7f7fd;
-      border-radius: 10px;
-    }
-    
-  </style>
+  <link rel="stylesheet" href="/styles/layout.css">
 </head>
+
+
 <body>
   <header>
     <h1>Feedback-System</h1>
@@ -73,8 +21,67 @@ const { title, description } = Astro.props;
     </nav>
   </header>
   <main>
-    <slot />
+    <slot/>
   </main>
   <footer>
+    <p>© 2024 Feedback-System</p>
+  </footer>
 </body>
+
+
+
 </html>
+<style>
+  body {
+  background: #ffffff;
+  color: #ddd;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #f4ebeb;
+  padding: 1rem;
+  color: #060606;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header nav a {
+  display: inline-block;
+  color: #070606;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  background: linear-gradient(to right, rgb(228 189 160), rgb(233 241 239));
+  border-radius: 8px;  /* Rounded corners */
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);  /* Light shadow */
+  transition: background 0.3s ease, transform 0.3s ease;  /* Transition effects */
+}
+
+header nav a:hover {
+  background: linear-gradient(to right, rgb(190 130 140), rgb(200 208 205));  /* Darker background on hover */
+  text-decoration: none;  /* No underline on hover */
+  transform: translateY(-2px);
+}
+
+footer {
+  background: #cdc5c5;
+  color: #fff;
+  padding: 0.1rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+main {
+  padding: 2rem;
+  max-width: 2000px;
+  background: #fffffffd;
+  border-radius: 10px;
+}
+</style>

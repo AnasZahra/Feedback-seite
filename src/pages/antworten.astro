@@ -1,8 +1,5 @@
 
-import Layout from '../layouts/Layout.astro';
----
-
-<Layout title="Antworten anzeigen">
+  
   <main>
     <div class="button-container">
       <button class="filter-button" data-type="Feedback">Feedback anzeigen</button>
@@ -21,7 +18,9 @@ import Layout from '../layouts/Layout.astro';
       Zurück
     </button>
   </main>
-</Layout>
+
+
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -134,18 +133,19 @@ import Layout from '../layouts/Layout.astro';
 </script>
 
 <style>
+
+.button{
+background-color: red;
+  }
+
   main {
-    margin: auto;
-    padding: 1rem;
-    width: 100%;
-    max-width: 900px;
-    color: #060606;
-    font-size: 16px;
-    line-height: 1.5;
-    position: relative;
+    
+    
+
   }
 
   .button-container {
+    
     display: flex;
     justify-content: space-around;
     margin-bottom: 1rem;
@@ -168,6 +168,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   #responses-container {
+    background-color: red;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 0.5rem;
@@ -177,21 +178,32 @@ import Layout from '../layouts/Layout.astro';
   }
 
   #responses {
-    list-style-type: none;
+    background-color: red;
+
     padding: 0;
     margin: 0;
   }
 
+
+  #responses.button {
+
+
+    margin: 200px;
+  }
+
   .message-item {
+    
     border-bottom: 1px solid rgb(0 0 0 / 10%);
     padding: 0.5rem;
   }
 
   .message-item:last-child {
+    
     border-bottom: none;
   }
 
   .message {
+    
     padding: 1rem;
     border-radius: 8px;
     background: #fff;
@@ -259,6 +271,7 @@ import Layout from '../layouts/Layout.astro';
     cursor: pointer;
     transition: background 0.3s ease;
     margin-left: 10px;
+    margin-bottom: 50px;
   }
 
   .delete-button:hover {
